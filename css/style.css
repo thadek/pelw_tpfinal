@@ -1,0 +1,140 @@
+/**
+CSS General **/
+
+
+body{
+    margin:0;
+    font-family:"Roboto";
+    background-color: #121212;
+    --primary:rgb(0, 255, 208);
+    --secondary:rgba(0, 255, 208, 0.697);
+}
+
+
+/**
+Variables de color
+**/
+
+/**
+CSS de la fuente */
+
+@font-face{
+    font-family:"Betrayal";
+    src:url("../fonts/btm.otf");
+}
+
+.logofont{
+    font-Family:"Betrayal";
+    font-size:1em;
+    color:white;
+    font-style:normal;
+
+}
+
+
+/***
+NavBar
+*/
+.navbar{
+    top:0;
+    width:100%;
+    z-index:100;
+    background-color: #292929;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+  
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    margin:0;
+    padding:0;
+    gap:1em;
+   
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    padding:.5em;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#9d9a9a;
+}
+
+
+.logo{
+   padding:1em; 
+}
+
+.navbar .logo img{
+    transition:0.3s;
+}
+
+.navbar .logo img:hover{
+  box-shadow: 0px 0px 10px 0px rgb(0, 255, 208);
+}
+
+main{
+    min-height:90vh;
+}
+
+footer{
+    background-color: #292929;
+    color:white;
+    padding:.3em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:1em;
+}
+
+
+@media screen and (max-width:768px){
+    .navbar{
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        gap:1em;
+    }
+
+    .navbar ul{
+       
+        align-items:flex-start;
+        gap:1em;
+        padding:1em;
+    }
+
+    .navbar .logo{
+        width:100%;
+        display:flex;
+        justify-content:center;
+       
+    }
+
+    .navbar .logo img{
+        width:100%;
+    }
+}
+
+
+.info_banner{
+    display:flex;
+    min-height:20vh;
+    background:linear-gradient(153deg, rgba(48, 244, 149, 0.403) 0%, rgba(232, 66, 0, 0.393) 100%),url("../img/slider/2.jpg");  
+    background-size:cover;
+    background-position:center;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:2em;
+    font-family: sans-serif;
+    font-style:italic;
+    
+}

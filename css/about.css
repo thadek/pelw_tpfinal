@@ -1,0 +1,87 @@
+.info_banner{
+    display:flex;
+    min-height:20vh;
+    background:linear-gradient(153deg, rgba(48, 244, 149, 0.403) 0%, rgba(232, 66, 0, 0.393) 100%),url("../img/slider/2.jpg");  
+    background-size:cover;
+    background-position:center;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:2em;
+    font-family: sans-serif;
+    font-style:italic;
+    
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+    gap:1em;
+    padding: 1em 0em 0em 2em;
+    color:white;
+    font-size:1.5em;
+    font-family: sans-serif;
+    font-style:italic;
+}
+
+
+.profesores{
+    display:flex;
+    flex-direction:column;
+    gap:1em;
+    padding: 1em 2em 2em 2em;
+    color:white;
+    font-size:1.5em;
+    font-family: sans-serif;
+    font-style:italic;
+}
+
+.profesores ul{
+    display:flex;
+    list-style:none;
+    padding:0;
+    align-items:center;
+    justify-content:space-between;
+    gap:1em;
+    margin:0;
+}
+
+.profesores ul li{
+    display:flex;
+    flex-direction:column;
+    gap:.1em;
+    color:white;
+    font-size:1em;
+    font-family: sans-serif;
+    font-style:italic;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    
+}
+
+.profesores ul li img{
+    width:15vw;
+    height:20vh;
+    border-radius:1%;
+    border-bottom:rgb(0, 255, 208) solid 5px;
+    border-top: solid 5px rgb(255, 255, 255);
+
+    transition:0.2s;
+    object-fit:cover;
+    object-position: 10% 10%;
+}
+
+.profesores ul li img:hover{
+    filter:drop-shadow(0 2px 20px rgb(0, 255, 208));
+}
+
+.texto_profesor{
+    font-size:1em;
+    font-family: sans-serif;
+    font-style:italic;
+    color:white;
+    background:#00000035;
+    margin:0;
+}
+

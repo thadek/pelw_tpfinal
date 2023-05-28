@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <script src="js/calculadoraIMC.js"></script>
+    <title>Calculá tu IMC - Nov+</title>
+</head>
+
+<body>
+
+
+    <!--Barra navegacion-->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" width="80" height="80" alt="logo-novplus"></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Quienes somos</a></li>
+            <li><a href="facilities.html">Instalaciones</a></li>
+            <li><a href="prices.html">Precios</a></li>
+            <li><a href="imc-calc.html">Calculá tu IMC</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="info_banner">
+            <div class="banner-content">
+                <h1>Calculá tu IMC</h1>
+            </div>
+        </section>
+
+        <section class="text_info">
+            <h2>¿Qué es el IMC?</h2>
+            <p>
+                El índice de masa corporal (IMC) es una medida de asociación entre el peso y la talla de un individuo. El IMC es usado como una herramienta de screening para identificar posibles problemas de peso para adultos. Sin embargo, no es un diagnóstico de sobrepeso u obesidad.
+            </p>
+        </section>
+
+        <section class="imc-calc">
+            <div class="calculadora">
+                    <form id="formulario">
+                        <label for="estatura">Estatura(cm)</label>
+                        <input type="number" class="input-number" name="estatura" id="estatura" >
+                        <span class="validation-errEstatura"> </span>
+                        <label for="peso">Peso(kg)</label>
+                        <input type="number" class="input-number" name="peso" id="peso" >
+                        <span class="validation-errPeso"> </span>
+                        <button type="submit" id="btnCalcular">Calcular</button>
+                    </form>
+            </div>
+
+            <div class="resultado">
+                <h2>Resultado</h2>
+                <span id="resultado"></span>
+                <span id="clasificacion"></span>
+            </div>
+            </section>
+            
+
+
+
+
+    </main>
+
+    <footer>
+        <span class="logofont">nov+</span>
+        <p>2023. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

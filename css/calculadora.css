@@ -1,0 +1,129 @@
+.imc-calc{
+    display:grid;
+ 
+    margin:1.5em;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+.text_info{
+    font-family:'Roboto';
+    color:#fff;
+    text-align:center;
+    background: rgba( 255, 255, 255, 0.2 ); 
+    backdrop-filter: blur( 12.5px ); 
+    -webkit-backdrop-filter: blur( 12.5px ); 
+    padding:.5em;
+    margin: 1.5em;
+
+}
+
+
+
+.calculadora{
+    color:#fff; 
+    grid-column: 1;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur( 15.5px ); 
+
+   
+}
+
+form{
+    padding:1em;
+    margin: 1em;
+    display:flex;
+    flex-direction:column;
+    gap:1em;
+}
+
+.calculadora label{
+    font-size:1.5em;
+    font-family:'Roboto';
+}
+
+.calculadora input{
+
+    font-size:1em;
+    background: rgba(162, 162, 162, 0.516);
+    border:none;
+    color:white;
+    padding:.5em;
+    border-radius:5px;
+    transition:all 0.3s ease-in-out; 
+}
+
+.calculadora button{
+
+    font-size:1.5em;
+    background: rgba(23, 23, 23, 0.516);
+    border:none;
+    color:white;
+    padding:.5em;
+    border-radius:5px;
+    transition:all 0.1s ease-in-out; 
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.308);
+    
+}
+
+.calculadora button:hover{
+    background:var(--secondary);
+    cursor:pointer;
+    box-shadow: 0px 0px 10px 0px rgba(5, 255, 184, 0.768);
+}
+
+.calculadora input:focus{
+    background:rgba(206, 206, 206, 0.697);
+    outline:none;
+}
+
+.calculadora h2{
+    font-size:2em;
+    font-family:'Roboto';
+    text-align:center;
+}
+
+.resultado{
+    grid-column:2;
+    display:flex;
+    text-align: center;
+    font-family:"Roboto";
+    font-size:1.5em;
+    color: #fff;
+    flex-direction:column;
+    background: rgba( 255, 255, 255, 0.4 );
+    backdrop-filter: blur( 16.5px ); 
+    -webkit-backdrop-filter: blur( 16.5px );  
+}
+
+.error{
+    border : 2px solid rgba(255, 60, 60, 0.999)!important;
+    transition: border 1s ease-in-out;
+}
+
+.validation-errPeso, .validation-errEstatura{
+    opacity:0;
+    color:rgb(255, 47, 47);
+    font-size:1em;
+    font-family:'Roboto';
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.mostrar {
+    opacity: 1;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-number {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

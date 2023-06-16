@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!--Iconos-->
+    <script src="js/navbar.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="js/contactForm.js"></script>
     <title>Nov+</title>
 </head>
+
 <body>
 
-    
+
     <!--Barra navegacion-->
     <nav class="navbar">
         <div class="logo">
             <a href="index.html"><img src="img/logo.png" width="80" height="80" alt="logo-novplus"></a>
         </div>
-        <ul>
+        <div class="menu-h"><button class="fa-solid fa-bars" onclick="toggleMenu()"></button></div>
+        <ul id="navbar_menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="about.html">Quienes somos</a></li>
             <li><a href="facilities.html">Instalaciones</a></li>
@@ -24,15 +32,70 @@
             <li><a href="contact.html">Contacto</a></li>
         </ul>
     </nav>
-    
+
     <main>
 
+        <section class="info_banner">
+            <div class="banner-content">
+                <h1>Contacto</h1>
+            </div>
+        </section>
+
+        <section class="contacto">
+            <!--Gmaps-->
+            <aside class="gmaps">
+                <iframe
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Almte.%20Brown%20355,%20Neuquen+(NOV%20PLUS)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                    width=100% height="600" allowfullscreen="" loading="lazy"></iframe>
+            </aside>
+
+            <!--Formulario de contacto-->
+            <div class="contacto-contenido">
+                <div class="contact-info">
+                    <h2><span class="logofont">NOV+</span> Gimnasios S.A.</h2>
+                    <ul class="iconos-social">
+                        <li><a href="#" class="fa fa-brands fa-facebook"></a></li>
+                        <li> <a href="#" class="fa fa-brands fa-instagram"></a></li>
+                        <li> <a href="#" class="fa fa-brands fa-tiktok"></a></li>
+                    </ul>
+                    <p><i class="fa-solid fa-location-dot"></i>  Almte. Brown 355, Neuquén, Argentina</p>
+                    <p><i class="fa-solid fa-phone"></i> +54 9 299 442-6257</p>
+                    
+                    <p><i class="fa-brands fa-whatsapp"></i> +54 9 299 594-2121</p>
+                
+                </div>
+
+                <form id="formulario">
+                    <div class="form-container">
+                        <div class="form-izquierda">
+                            <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                            <input type="email" name="email" placeholder="Email" id="apellido">
+                            <input type="text" name="asunto" placeholder="Asunto" id="asunto">
+                            <input type="text" name="telefono" placeholder="Celular de contacto" id="celular">
+                        </div>
+                        <div class="form-derecha">
+                            <textarea name="mensaje" placeholder="Dejanos tu mensaje..." rows=4 cols=30
+                                id="mensaje"></textarea>
+                                <button type="submit" onclick="enviarForm()">Enviar</button>
+                       </div>
+                    </div>  
+                    <div class="g-recaptcha"  data-sitekey="6Lcw0HMmAAAAAOoLxltnaQdT1888d891b4f2OOLW"></div>       
+                </form>
+            </div>
+
+        </section>
+
+
+
+
     </main>
-    
+
     <footer>
-        <span class="logofont">nov+</span><p>2023. Todos los derechos reservados.</p>
+        <span class="logofont">nov+</span>
+        <p>2023. Todos los derechos reservados.</p>
     </footer>
 
 
 </body>
+
 </html>

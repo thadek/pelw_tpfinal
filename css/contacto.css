@@ -6,6 +6,8 @@
 
 .gmaps iframe {
     border: 0;
+    width:100%;
+    height:600px;
 }
 
 .contacto {
@@ -278,3 +280,4 @@
     color:#fff;
     font-size:2.5em;
 }
+

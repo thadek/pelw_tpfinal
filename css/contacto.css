@@ -152,7 +152,7 @@
 
 .fa:hover {
     opacity: 0.7;
-    
+
 }
 
 /* Facebook */
@@ -172,8 +172,8 @@
     color: white;
 }
 
-.fa-whatsapp{
-    font-size:1.5em;
+.fa-whatsapp {
+    font-size: 1.5em;
 }
 
 .contact-info {
@@ -209,8 +209,8 @@
         width: 100%;
     }
 
-    .gmaps iframe{
-        height:50%;
+    .gmaps iframe {
+        height: 50%;
     }
 
     .contacto-contenido {
@@ -248,4 +248,33 @@
     .contact-info h2 {
         text-align: center;
     }
+}
+
+
+.error{
+    border : 1px solid rgba(255, 60, 60, 0.999)!important;
+    transition: border 1s ease-in-out;
+}
+
+.error-c{
+    color: rgba(255, 60, 60, 0.999)!important;
+    transition: color 1s ease-in-out;
+}
+
+.placeholderErr::placeholder{
+    color:rgb(199, 169, 169);
+    transition: color 1s ease-in-out;
+    font-size:.7em;
+}
+
+.contacto__mensaje{ 
+
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+}
+
+.fa-paper-plane{
+    color:#fff;
+    font-size:2.5em;
 }

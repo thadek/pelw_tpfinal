@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /**
-     * Valida los 2 campos del formulario y retorna boolean.
+     * Valida los 2 campos del formulario, cambia de color lo que este incorrecto y retorna boolean.
      * @param Number peso 
      * @param Number estatura 
      * @returns boolean Error de validacion

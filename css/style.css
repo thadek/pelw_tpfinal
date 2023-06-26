@@ -95,74 +95,8 @@ footer {
     gap: 1em;
 }
 
-.menu-h {
-    display: none;
-}
-
-@media screen and (max-width:768px) {
-
-    body{
-        overflow-x: hidden;
-        max-width: 100%;
-    }
-
-    .navbar {
-        display:flex;
-        justify-content: space-between;
-        align-items:left;
-        
-    }
-
-   
-
-  
-
-    .navbar ul {
-        display:none;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 1em;
-        padding: 1em;
-    }
-
-    .navbar .logo {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    .navbar .logo img {
-        width: 100%;
-    }
-
-    .menu-h {
-        display: block;
-    }
 
 
-    .menu-h button {
-        display: block;
-        background-color: transparent;
-        border: none;
-        color: white;
-        font-size: 2em;
-      
-        transition: 0.3s;
-    }
-
-
-    .menu-h button:hover {
-        color: #9d9a9a;
-        cursor: pointer;
-    }
-
-
-
-    .fa-bars {
-        display: block;
-        color: white;
-    }
-}
 
 
 .info_banner {

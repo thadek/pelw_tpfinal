@@ -22,29 +22,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const clasificarIMC = (imc) => {
         let clasificacion = '';
         if (imc < 18.5) {
-            clasificacion = 'Peso insuficiente';
+            if (imc < 5) {
+                clasificacion = {
+                    mensaje: "💀 Vamos a suponer que es un error de tipeo 💀",
+                    color: "red"
+                };
+            } else if (imc < 16) {
+                clasificacion = {mensaje:'Delgadez severa', color: 'red'};
+            } else if (imc >= 16 && imc <= 16.99) {
+                clasificacion = {mensaje:'Delgadez moderada', color: 'red'};
+            } else if (imc >= 17 && imc <= 18.49) {
+                clasificacion = {mensaje:'Delgadez aceptable', color: 'red'};
+            }
         } else if (imc >= 18.5 && imc <= 24.9) {
-            clasificacion = 'Peso Normal';
+            clasificacion = {mensaje:'Peso Normal', color: 'green'};
         } else if (imc >= 25 && imc <= 26.9) {
-            clasificacion = 'Sobrepeso grado I';
+            clasificacion = {mensaje:'Sobrepeso grado I', color: 'yellow'};
         } else if (imc >= 27 && imc <= 29.9) {
-            clasificacion = 'Sobrepeso grado II (preobesidad)';
+            clasificacion = {mensaje:'Sobrepeso grado II (preobesidad)', color: 'yellow'};
         } else if (imc >= 30 && imc <= 34.9) {
-            clasificacion = 'Obesidad de tipo I';
+            clasificacion = {mensaje:'Obesidad de tipo I', color: 'red'};
         } else if (imc >= 35 && imc <= 39.9) {
-            clasificacion = 'Obesidad de tipo II';
+            clasificacion = {mensaje:'Obesidad de tipo II', color: 'red'};
         } else if (imc >= 40 && imc <= 49.9) {
-            clasificacion = 'Obesidad de tipo III (mórbida)';
+            clasificacion = {mensaje:'Obesidad de tipo III (mórbida)', color: 'red'};
         } else if (imc >= 50) {
-            clasificacion = 'Obesidad de tipo IV (extrema)';
+            clasificacion = {mensaje:'Obesidad de tipo IV (extrema)', color: 'red'};
         }
         return clasificacion;
     }
 
 
     const mostrarResultado = (resultado, clasificacion) => {
-        document.getElementById('resultado').innerHTML = resultado;
-        document.getElementById('clasificacion').innerHTML = clasificacion;
+       document.getElementById('resultado').innerHTML = `<p>${resultado} <br>${clasificacion.mensaje} </p>`;
+       document.querySelector("#resultado p").classList.add(clasificacion.color);
     }
 
 
@@ -57,10 +68,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const validarCampos = (peso, estatura) => {
 
         let error = false;
-        if (peso.value == '') {
+        if (peso.value == '' || peso.value == 0 || peso.value < 0 || peso.value > 500 || peso.value < 2) {
             peso.classList.add('error');
             const span = document.querySelector(".validation-errPeso");
-            span.innerHTML = "El campo peso es obligatorio";
+            if (peso.value == "") {
+                span.innerHTML = "El campo peso es obligatorio";
+            } else if (peso.value == 0) {
+                span.innerHTML = "El campo peso no puede ser 0";
+            } else if (peso.value < 0) {
+                span.innerHTML = "El campo peso no puede ser negativo";
+            } else if (peso.value > 500) {
+                span.innerHTML = "El campo peso no puede ser mayor a 500kg";
+            } else if (peso.value < 5) {
+                span.innerHTML = "El campo peso no puede ser menor a 2kg";
+            }
+
             span.classList.add("mostrar");
             error = true;
             const listener = peso.addEventListener('focus', function () {
@@ -72,11 +94,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 peso.removeEventListener('focus', listener);
 
             });
-        } 
-        if (estatura.value == '') {
+        }
+
+        if (estatura.value == '' || estatura.value == 0 || estatura.value < 0 || estatura.value > 300 || estatura.value < 35) {
             estatura.classList.add('error');
             const span = document.querySelector('.validation-errEstatura')
-            span.innerHTML = "El campo estatura es obligatorio";
+            if (estatura.value == "") {
+                span.innerHTML = "El campo estatura es obligatorio";
+            } else if (estatura.value == 0) {
+                span.innerHTML = "El campo estatura no puede ser 0";
+            } else if (estatura.value < 0) {
+                span.innerHTML = "El campo estatura no puede ser negativo";
+            } else if (estatura.value > 300) {
+                span.innerHTML = "El campo estatura no puede ser mayor a 300 cm ";
+            } else if (estatura.value < 50) {
+                span.innerHTML = "El campo estatura no puede ser menor a 35 cm";
+            }
             span.classList.add("mostrar");
             error = true;
             const listener = estatura.addEventListener('focus', function () {

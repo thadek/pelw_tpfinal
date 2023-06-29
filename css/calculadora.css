@@ -1,6 +1,6 @@
 .imc-calc{
     display:grid;
- 
+    font-weight: lighter;
     margin:1.5em;
     grid-template-columns: 1fr 1fr;
    
@@ -37,6 +37,9 @@ form{
     gap:1em;
 }
 
+form span{
+    font-weight: 450;
+}
 .calculadora label{
     font-size:1.5em;
     font-family:'Roboto';
@@ -55,21 +58,23 @@ form{
 
 .calculadora button{
 
-    font-size:1.5em;
-    background: rgba(23, 23, 23, 0.516);
+
+    font-size:20px;
+    background: rgba(23, 23, 23, 0.585);
     border:none;
     color:white;
     padding:.5em;
     border-radius:5px;
-    transition:all 0.1s ease-in-out; 
+    transition:all 0.2s ease-in-out; 
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.308);
     
 }
 
 .calculadora button:hover{
+   
     background:var(--secondary);
     cursor:pointer;
-    box-shadow: 0px 0px 10px 0px rgba(5, 255, 184, 0.768);
+    box-shadow: 0px 0px 10px 0px rgba(0, 171, 122, 0.768);
 }
 
 .calculadora input:focus{
@@ -89,11 +94,33 @@ form{
     text-align: center;
     font-family:"Roboto";
     font-size:1.5em;
+    background:linear-gradient(153deg, rgb(0, 0, 0) 0%, rgba(9, 6, 5, 0.592) 100%),url("/img/galeria/2.jpg");
+    background-size:cover;
+    background-position:center;
     color: #fff;
     flex-direction:column;
-    background: rgba( 255, 255, 255, 0.4 );
+    justify-content:center;
     backdrop-filter: blur( 16.5px ); 
     -webkit-backdrop-filter: blur( 16.5px );  
+}
+.resultado img{
+    padding-left:1em;
+}
+.resultado h4{
+    display:flex;
+    justify-content:left;
+    padding:1em;
+    font-weight:lighter;
+
+    margin:0;
+}
+
+.resultado-spans{
+   font-weight: lighter;
+}
+
+.resultado-spans span{
+    font-weight: lighter;
 }
 
 .error{
@@ -126,4 +153,26 @@ form{
 .input-number {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+
+
+#resultado p{ 
+    font-size:1em;  
+    justify-content:center;
+    margin:0 auto; 
+    padding:1em; 
+}
+
+/** Colores resultado*/
+.red{
+    background:linear-gradient(153deg, rgba(245,36,36,0.5239670868347339) 0%, rgba(0,0,0,0.3925945378151261) 100%);
+}
+
+.green{
+    background:linear-gradient(153deg, rgba(48,244,149,0.5239670868347339) 0%, rgba(0,0,0,0.3925945378151261) 100%);
+}
+
+.yellow{
+    background:linear-gradient(153deg, rgba(233,244,48,0.5239670868347339) 0%, rgba(0,0,0,0.3925945378151261) 100%);
 }

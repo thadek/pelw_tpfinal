@@ -28,34 +28,34 @@ document.addEventListener('DOMContentLoaded', function () {
                     color: "red"
                 };
             } else if (imc < 16) {
-                clasificacion = {mensaje:'Delgadez severa', color: 'red'};
+                clasificacion = { mensaje: 'Delgadez severa', color: 'red' };
             } else if (imc >= 16 && imc <= 16.99) {
-                clasificacion = {mensaje:'Delgadez moderada', color: 'red'};
+                clasificacion = { mensaje: 'Delgadez moderada', color: 'yellow' };
             } else if (imc >= 17 && imc <= 18.49) {
-                clasificacion = {mensaje:'Delgadez aceptable', color: 'red'};
+                clasificacion = { mensaje: 'Delgadez aceptable', color: 'yellow' };
             }
         } else if (imc >= 18.5 && imc <= 24.9) {
-            clasificacion = {mensaje:'Peso Normal', color: 'green'};
+            clasificacion = { mensaje: 'Peso Normal', color: 'green' };
         } else if (imc >= 25 && imc <= 26.9) {
-            clasificacion = {mensaje:'Sobrepeso grado I', color: 'yellow'};
+            clasificacion = { mensaje: 'Sobrepeso grado I', color: 'yellow' };
         } else if (imc >= 27 && imc <= 29.9) {
-            clasificacion = {mensaje:'Sobrepeso grado II (preobesidad)', color: 'yellow'};
+            clasificacion = { mensaje: 'Sobrepeso grado II (preobesidad)', color: 'yellow' };
         } else if (imc >= 30 && imc <= 34.9) {
-            clasificacion = {mensaje:'Obesidad de tipo I', color: 'red'};
+            clasificacion = { mensaje: 'Obesidad de tipo I', color: 'red' };
         } else if (imc >= 35 && imc <= 39.9) {
-            clasificacion = {mensaje:'Obesidad de tipo II', color: 'red'};
+            clasificacion = { mensaje: 'Obesidad de tipo II', color: 'red' };
         } else if (imc >= 40 && imc <= 49.9) {
-            clasificacion = {mensaje:'Obesidad de tipo III (mórbida)', color: 'red'};
+            clasificacion = { mensaje: 'Obesidad de tipo III (mórbida)', color: 'red' };
         } else if (imc >= 50) {
-            clasificacion = {mensaje:'Obesidad de tipo IV (extrema)', color: 'red'};
+            clasificacion = { mensaje: 'Obesidad de tipo IV (extrema)', color: 'red' };
         }
         return clasificacion;
     }
 
 
     const mostrarResultado = (resultado, clasificacion) => {
-       document.getElementById('resultado').innerHTML = `<p>${resultado} <br>${clasificacion.mensaje} </p>`;
-       document.querySelector("#resultado p").classList.add(clasificacion.color);
+        document.getElementById('resultado').innerHTML = `<p>${resultado} <br>${clasificacion.mensaje} </p>`;
+        document.querySelector("#resultado p").classList.add(clasificacion.color);
     }
 
 
